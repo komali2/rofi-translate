@@ -1,0 +1,12 @@
+#!/bin/bash
+
+text=$(rofi -dmenu -p "EN → ZH")
+[ -z "$text" ] && exit 0
+
+result=$(trans -brief :zh-TW "$text")
+
+# Copy to clipboard automatically
+echo -n "$result" | wl-copy
+
+# Show result (already copied)
+echo "$result" | rofi -dmenu -p "中文 (copied)"

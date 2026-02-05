@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Translate
+Exec=rofi-translate
+Icon=accessories-dictionary
+Type=Application
+Categories=Utility;
